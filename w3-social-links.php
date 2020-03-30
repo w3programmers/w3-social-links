@@ -8,8 +8,8 @@
  Author URI: http://w3programmers.com/bangla
  License: GPLv2
  */
-add_action( 'w3_social-links', 'social_links',10,99);
 
+//display social links
 function w3_social_links(...$links){
     foreach($links as $link){
         echo $link;
@@ -58,6 +58,6 @@ function w3_social_links_css() {
 
 	";
 }
-
+add_action( 'w3_social_links', 'w3_social_links',10,99);
 add_action( 'wp_head', 'w3_social_links_css' );
 
